@@ -102,7 +102,7 @@ public class MemberController {
 	@RequestMapping("/toEdit")
 	public String toEdit(HttpSession session, Model model) {
 		Member m = (Member) session.getAttribute("member");
-		if(m==null){
+		if(m == null){
 			return "redirect:/member/toLogin";
 		}
 		Member member = memberService.findById(m.getId());
